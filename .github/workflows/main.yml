@@ -254,8 +254,8 @@ jobs:
       uses: actions/upload-artifact@v3
       if: success() || failure()
       with:
-        name: test-results-${{ matrix.platform.id }}
-        path: build/results_*.xml
+        name: artifact-${{ matrix.platform.id }}
+        path: build
 
   test_results:
     name: Test results
